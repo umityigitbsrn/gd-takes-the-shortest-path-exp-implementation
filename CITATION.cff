@@ -1,0 +1,11 @@
+preferred-citation:
+  type: article
+  authors:
+  - family-names: "Samet"
+    given-names: "Oymak"
+  - family-names: "Mahdi"
+    given-names: "Soltanolkotabi"
+  journal: "PMLR"
+  month: 5
+  title: "Overparameterized Nonlinear Learning: Gradient Descent Takes the Shortest Path?"
+  year: 2019
