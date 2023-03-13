@@ -1,5 +1,6 @@
 import torch
-from typing import Dict
+from typing import Dict, Callable
+import numpy as np
 
 
 def normalized_misfit(labels: torch.Tensor, data: torch.Tensor, init_model: torch.nn.Module, model: torch.nn.Module) \
@@ -35,3 +36,20 @@ def normalized_distance(init_model: torch.nn.Module, model: torch.nn.Module) -> 
             normalized_distance_dict[init_name] = (distance / init_distance).item()
 
     return normalized_distance_dict
+
+
+def normalized_misfit_function_based(labels: np.ndarray,
+                                     kernel_function: Callable[[np.ndarray, np.ndarray], np.ndarray],
+                                     data: np.ndarray,
+                                     init_weight: np.ndarray,
+                                     weight: np.ndarray) -> float:
+    misfit = np.linalg.norm(labels - kernel_function(data, weight))
+    init_misfit = np.linalg.norm(labels - kernel_function(data, init_weight))
+    return misfit / init_misfit
+
+
+def normalized_distance_weight_based(init_weight: np.ndarray,
+                                     weight: np.ndarray) -> float:
+    distance = np.linalg.norm(weight - init_weight)
+    init_distance = np.linalg.norm(init_weight)
+    return distance / init_distance

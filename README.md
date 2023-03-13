@@ -18,4 +18,6 @@ and dataset selection) to obtain the typical behavior.
 Implementation of this experiment is under 'low_rank_regression' folder
 
 Gradient for the loss function of low rank regression can be mentioned in the paper on page 32 (in Appendix).
-The implementation will be based on this notation 
+The implementation will be based on this notation
+
+The experiment setup is taken from the page 13 (under 6.2 Low-rank Regression) 
