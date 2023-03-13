@@ -131,4 +131,6 @@ dmypy.json
 # custom
 **/.idea/
 **/data/
+**/mnist_500_json/
+**/mnist_5000_json/
 
