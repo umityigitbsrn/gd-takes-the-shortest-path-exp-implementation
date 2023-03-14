@@ -131,6 +131,7 @@ dmypy.json
 # custom
 **/.idea/
 **/data/
-**/mnist_500_json/
-**/mnist_5000_json/
+**/misfit_distance_500_json/
+**/misfit_distance_5000_json/
+#**/misfit_distance_json/
 
