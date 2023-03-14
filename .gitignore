@@ -133,5 +133,5 @@ dmypy.json
 **/data/
 **/misfit_distance_500_json/
 **/misfit_distance_5000_json/
-#**/misfit_distance_json/
+**/misfit_distance_json/
 
